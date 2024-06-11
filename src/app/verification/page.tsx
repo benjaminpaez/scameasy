@@ -24,10 +24,12 @@ export default function VerificationPage() {
 
     const latitude = location.latitude.toString();
     const longitude = location.longitude.toString();
-    const origin = Object.fromEntries(headers()).origin.toString();
-    const plataform = Object.fromEntries(headers())[
-      "sec-ch-ua-platform"
-    ].toString();
+    const headerEntries = Object.entries(headers());
+    const plainHeaders = Object.fromEntries(headerEntries);
+    const origin = plainHeaders.origin ? plainHeaders.origin.toString() : "";
+    const platform = plainHeaders["sec-ch-ua-platform"]
+      ? plainHeaders["sec-ch-ua-platform"].toString()
+      : "";
 
     const newSwindler = await prisma.swindler.create({
       data: {
@@ -36,7 +38,7 @@ export default function VerificationPage() {
         imageUrl: dataImage,
         createdAt: new Date(),
         origin: origin,
-        plataform: plataform,
+        plataform: platform,
       },
     });
 
