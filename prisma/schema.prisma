@@ -1,0 +1,20 @@
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Swindler{
+  id Int @id @default(autoincrement())
+  createdAt DateTime? @default(now())
+  latitude String
+  longitude String
+  origin String
+  plataform String
+  imageUrl String
+}
