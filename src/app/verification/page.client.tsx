@@ -44,11 +44,11 @@ export default function VerificationPageClient({
 
   return (
     <form
-      className="xs:col-span-5 lg:place-items-center lg:max-w-screen-sm lg:min-h-screen lg:bg-white"
+      className="xs:col-span-5 lg:place-items-center lg:max-w-screen-sm lg:min-h-screen lg:bg-white "
       onSubmit={handleSubmit}
     >
       <section className="h-[85vh] relative">
-        <h1 className="mt-2 p-4 ml-2 font-semibold text-lg lg:text-center">
+        <h1 className="mt-2 p-4 ml-2 font-semibold text-lg lg:text-center lg:p-4 lg:m-0">
           Comprobación rápida
         </h1>
         <div className="flex ml-8 mr-8">

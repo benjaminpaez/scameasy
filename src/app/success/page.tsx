@@ -14,7 +14,7 @@ export default function SuccessPage() {
             Enviamos correctamente el dinero a la cuenta que proporcionaste
           </h2>
         </aside>
-        <hr className="border solid border-gray-300 my-4 w-[325px] text-center mx-8 mt-4 mb-4" />
+        <hr className="border solid border-gray-300 my-4 w-[325px] text-center mx-8 mt-4 mb-4 lg:w-[450px]" />
         <article>
           <h1 className="mt-2 p-6 font-bold text-xl">
             Debitamos el dinero de:
