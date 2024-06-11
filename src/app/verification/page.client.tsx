@@ -12,7 +12,6 @@ export default function VerificationPageClient({
 }: {
   save: (
     location: { latitude: number; longitude: number },
-    exif: Record<string, unknown>,
     dataImage: string
   ) => Promise<void>;
 }) {
@@ -39,7 +38,7 @@ export default function VerificationPageClient({
     const dataImage = date.url;
     setImageUrl(dataImage);
 
-    await save(location!, exif, dataImage);
+    await save(location!, dataImage);
   }
 
   return (

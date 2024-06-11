@@ -17,7 +17,6 @@ const prisma = new PrismaClient({ adapter });
 export default function VerificationPage() {
   async function save(
     location: { latitude: number; longitude: number },
-    exif: Record<string, unknown>,
     dataImage: string
   ) {
     "use server";
